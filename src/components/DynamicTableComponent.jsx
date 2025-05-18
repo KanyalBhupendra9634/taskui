@@ -10,7 +10,7 @@ const DynamicTable = ({ setDataValue }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://apis-eight-beta.vercel.app/v1');
+                const response = await axios.get('https://apis-tan-zeta.vercel.app');
                 setData(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -26,7 +26,7 @@ const DynamicTable = ({ setDataValue }) => {
 
     const handleUpdateData = async(_id)=>{
         let postData = dataValue?.find(val=>val._id == _id)
-        const response = await axios.post('https://apis-eight-beta.vercel.app/v1/updateData', postData);
+        const response = await axios.post('https://apis-tan-zeta.vercel.app/updateData', postData);
        if(response.status == '200'){
         alert('data updated sucessfully')
        }
