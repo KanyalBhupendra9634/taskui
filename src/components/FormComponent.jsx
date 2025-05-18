@@ -26,7 +26,7 @@ const MyForm = ({ setDataValue }) => {
     try {
       if (placeName && aboutValue) {
         let postData = { 'name': `${placeName}`, 'description': `${aboutValue}` }
-        const response = await axios.post('https://apis-eight-beta.vercel.app/createData', postData);
+        const response = await axios.post('https://apis-eight-beta.vercel.app/v1/createData', postData);
         console.log('Post request successful:', response.data);
         setAbout('')
         setPlaceName('')
